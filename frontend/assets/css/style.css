@@ -1,14 +1,33 @@
 /* GLOBAIS */
 
 * { margin: 0; padding: 0; }
-:root { --orange: #ff6047; }
+:root { 
+    --orange: #ff6047;
+    --gren: #2ab318;
+    --black: #202020;
+}
+h1, h1, h3, h4, h5, h6, p, span { color: var(--black); }
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-thumb { 
+    background: red;  
+    border-radius: 10px;
+}
 .btn { border-radius: 4px; }
 .button-black { 
-    background: #000;
+    background: var(--black);
     color: #fff;
-    border: 2px solid #000;
+    border: 2px solid var(--black);
 }
-.button-black:hover { border: 2px solid #000; }
+.button-black:hover { border: 2px solid var(--black); }
+.button-green {
+    background: var(--gren);
+    color: #fff;
+    border: 2px solid var(--gren);
+}
+.button-green:hover { 
+    border: 2px solid var(--gren);
+    color: var(--gren);
+}
 .button-orange { 
     background: var(--orange);
     color: #fff;
@@ -19,18 +38,21 @@
     border: 2px solid var(--orange);
 }
 .button-black-outline {
-    color: #000;
-    border: 2px solid #000;
+    color: var(--black);
+    border: 2px solid var(--black);
     width: 100%;
     border-radius: 0;
 }
 .button-black-outline:hover { 
-    background: #000;
+    background: var(--black);
     color: #fff;
-    border: 2px solid #000;
+    border: 2px solid var(--black);
 }
-.button-transparent { border: 2px solid transparent; }
-.button-transparent:hover { border: 2px solid #000; }
+.button-transparent { 
+    border: 2px solid transparent; 
+    color: var(--black);
+}
+.button-transparent:hover { border: 2px solid var(--black); }
 
 .text-orange { color: var(--orange); }
 
@@ -121,5 +143,14 @@ footer .social {
     background-size: cover;
 }
 
-#agenda-bloco2 .agenda-background { background: #f5f5f5; }
+#agenda-bloco2 #agenda-background { background: #f5f5f5; }
 #agenda-bloco2 span.checked { color: var(--orange); }
+
+#psicologo-background { background: #f5f5f5; }
+
+#psicologo-bloco2 #lista-horarios { list-style: none; }
+#psicologo-bloco2 #lista-horarios li { border-left: 3px solid #e2e2e2; }
+#psicologo-bloco2 #lista-horarios li.first { border-left: 3px solid var(--orange); }
+#psicologo-bloco2 #lista-horarios li p { font-weight: 500; }
+
+#psicologo-bloco5 .card-content { height: 300px; }
