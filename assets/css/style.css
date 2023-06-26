@@ -1,0 +1,98 @@
+/* GLOBAIS */
+
+* { margin: 0; padding: 0; }
+:root {
+    --orange: #ff6047;
+}
+.btn { border-radius: 4px; }
+.button-black { 
+    background: #000;
+    color: #fff;
+    border: 2px solid #000;
+}
+.button-black:hover { border: 2px solid #000; }
+.button-orange { 
+    background: var(--orange);
+    color: #fff;
+    border: 2px solid var(--orange);
+}
+.button-orange:hover {
+    color: var(--orange);
+    border: 2px solid var(--orange);
+}
+.button-black-outline {
+    color: #000;
+    border: 2px solid #000;
+    width: 100%;
+    border-radius: 0;
+}
+.button-black-outline:hover { 
+    background: #000;
+    color: #fff;
+    border: 2px solid #000;
+}
+.button-transparent { border: 2px solid transparent; }
+.button-transparent:hover { border: 2px solid #000; }
+
+span.orange { color: var(--orange); }
+
+/* FIM - GLOBAIS */
+
+header #logo span {
+    font-weight: 700 !important;
+}
+
+#logo-text { font-weight: 900; }
+
+#bloco1 {
+    background: url("../img/homepage-3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#bloco4 #cards-background { background-color: #e2e2e2; }
+
+#bloco4 .card-content { height: 480px; }
+
+footer { background: var(--orange); }
+
+footer .social {
+    border: 2px solid #fff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#login #card, #cadastro #card {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.150);
+}
+
+#login #card .col-img {
+    background: url("../img/imglogin.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 0.375rem 0 0 0.375rem;
+}
+
+#cadastro #card .col-img {
+    background: url("../img/imglogin.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 0 0.375rem 0.375rem 0;
+}
+
+#login #card .return, #cadastro #card .return {  
+    font-weight: 700;
+    color: var(--orange);
+    font-size: 20px;
+}
+
+#login #card .title {
+    border-radius: 10px;
+    height: 5px;
+    width: 100px;
+    box-shadow: 0 50px 0 0 var(--orange);
+}
