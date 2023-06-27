@@ -9,6 +9,7 @@ router.post("/user/login", userControllers.loginAction)
 router.post("/user/register", userControllers.registerAction)
 router.put("/user/:id", verifyJWT, imageMiddleware.upload, imageMiddleware.resize, userControllers.editAction)
 router.delete("/user/:id", verifyJWT, userControllers.deleteAction)
-//  /avatar/:id
+router.get("/user/token", userControllers.verifyJWT)
+
 
 module.exports = router

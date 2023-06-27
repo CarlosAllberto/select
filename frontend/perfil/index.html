@@ -10,6 +10,38 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 </head>
 <body>
+    <!-- CABEÇALHO -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <div id="logo" class="d-flex align-items-center">
+                        <img width="120px" class="img-fluid" src="../assets/img/logo (3).png" alt="">
+                        <span class="h3 m-0">SELECT</span>
+                    </div>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav ms-auto me-auto">
+                        <a class="nav-item nav-link fw-bold" href="../index.html">Home</a>
+                        <a class="nav-item nav-link fw-bold" href="#">Suporte</a>
+                        <a class="nav-item nav-link fw-bold" href="#">Sobre nos</a>
+                        <a class="nav-item nav-link fw-bold" href="../cursos/">Cursos</a>
+                        <a class="nav-item nav-link fw-bold" href="#">Contato</a>
+                    </div>
+                </div>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="ms-auto">
+                        <a href="#">
+                            <img class="rounded-circle img-perfil" width="45px" height="45px" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
     
     <main>
         <section name="perfil" id="perfil">
@@ -23,32 +55,39 @@
                             <h1 class="title">Meu Perfil</h1>
                         </div>
                         <div class="row">
-                            <div class="col-lg-7 col-sm-12 d-flex align-items-center order-lg-1 order-2">
+                            <div class="col-lg-12 col-sm-12 d-flex align-items-center order-lg-1 order-2">
                                 <div class="w-100 px-5 pt-5">
-                                    <div class="my-4">
-                                        <label for="nome">Nome completo</label>
-                                        <input id="nome" name="nome" type="text" placeholder="Digite seu novo nome" class="form-control">
-                                    </div>
-                                    <div class="my-4">
-                                        <label for="email">E-mail</label>
-                                        <input id="email" name="email" type="text" placeholder="Digite seu novo e-mail" class="form-control">
-                                    </div>
-                                    <div class="my-4">
-                                        <label for="pass">Senha</label>
-                                        <div class="input-group">
-                                            <input id="pass" name="pass" type="password" placeholder="Digite sua nova senha" class="form-control">
-                                            <div class="input-group-append">
-                                                <button class="btn btn-outline-secondary">
-                                                    <i class="bi bi-eye"></i>
-                                                </button>
+                                    <div class="row">
+                                        <div class="col-lg-6 col-sm-12">
+                                            <div class="my-4">
+                                                <label for="nome">Nome completo</label>
+                                                <input id="nome" name="nome" type="text" placeholder="Digite seu novo nome" class="form-control">
+                                            </div>
+                                            <div class="my-4">
+                                                <label for="email">E-mail</label>
+                                                <input id="email" name="email" type="text" placeholder="Digite seu novo e-mail" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-sm-12">
+                                            <div class="my-4">
+                                                <label for="password">Senha</label>
+                                                <div class="input-group">
+                                                    <input id="password" name="password" type="password" placeholder="Digite sua nova senha" class="form-control">
+                                                    <div class="input-group-append">
+                                                        <button type="button" id="show-password" class="btn btn-outline-secondary">
+                                                            <i id="show-password-icon" class="bi bi-eye"></i>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="my-4">
+                                                <label for="data">Data de nascimento</label>
+                                                <input id="data" name="data" type="date" class="form-control">
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="my-4">
-                                        <label for="data">Data de nascimento</label>
-                                        <input id="data" name="data" type="date" class="form-control">
-                                    </div>
-                                    <div class="my-4">
+                                    
+                                    <div class="mb-4">
                                         <label for="data">Genero:</label>
                                         <div class="d-flex gap-3">
                                             <div>
@@ -67,38 +106,18 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-5 col-sm-12 order-lg-2 order-1">
-                                <div class="d-flex justify-content-center mt-5">
-                                    <div>
-                                        <img class="rounded-circle" width="150px" height="150px" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt="">
-                                        <div class="perfil-button position-relative">
-                                            <div>
-                                                <label for="image">
-                                                    <div class="btn button-gray"><i class="bi bi-pencil"></i></div>
-                                                </label>
-                                                <input class="d-none" type="file" name="image" id="image">
-                                            </div>
-                                            <!--
-                                                <div>
-                                                    <button class="btn button-gray"><i class="bi bi-trash"></i></button>
-                                                </div>
-                                            -->
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                             <div class="col-lg-12 col-sm-12 order-3">
                                 <div class="pb-5">
                                     <div class="row gy-4">
                                         <div class="col-lg-7 col-sm-12">
                                             <div class="d-flex justify-content-between px-5 gap-3">
-                                                <button class="btn button-gray-outline w-25 fw-bold">Excluir</button>
-                                                <button class="btn button-green w-75 fw-bold">Salvar</button>
+                                                <button type="button" class="btn button-gray-outline w-25 fw-bold" data-bs-toggle="modal" data-bs-target="#exampleModal">Excluir</button>
+                                                <button type="button" class="btn button-green w-75 fw-bold">Salvar</button>
                                             </div>
                                         </div>
                                         <div class="col-lg-5 col-sm-12 d-flex justify-content-end align-items-center">
                                             <div class="px-5">
-                                                <a href="../index.html" class="text-decoration-none fw-bold text-secondary"><i class="bi bi-box-arrow-left"></i> Logout</a>
+                                                <button type="button" id="logout" class="btn fw-bold text-secondary"><i class="bi bi-box-arrow-left"></i> Logout</button>
                                             </div>
                                         </div>
                                     </div>
@@ -111,5 +130,29 @@
         </section>
     </main>
 
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Tem certeza que deseja excluir?</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Digite sua senha no campo abaixo para excluir a conta.</p>
+                    <input id="password-delete" name="password-delete" type="password" placeholder="Digite sua senha" class="form-control">
+                </div>
+                <div class="modal-footer">
+                    <button id="delete-account" type="button" class="btn btn-primary">Excluir</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../assets/js/verifyLogin.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/logout.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
 </body>
 </html>

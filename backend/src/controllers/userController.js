@@ -62,7 +62,7 @@ exports.editAction = async (req, res) => {
 			let token = createToken({ nome, email, data, genero })
 			return res.send({ message: "Dados alterados.", response, token })
 		}
-		res.status(404).send({ message: "Nada para alterar." })
+		res.status(403).send({ message: "Nada para alterar." })
 	} catch {
 		res.status(505).send({ message: "Tente novamente em alguns instantes." })
 	}
@@ -71,13 +71,13 @@ exports.editAction = async (req, res) => {
 // deleta a conta do usuario
 exports.deleteAction = async (req, res) => {
 	let { id } = req.params
-	let { email, password } = req.body
+	let { password } = req.body
 
 	try {
-		let response = await UsuariosModel.findOne({ where: { email } })
+		let response = await UsuariosModel.findOne({ where: { id } })
 		if (response) {
 			if (await passwordCompare(password, response.password)) {
-				response = await UsuariosModel.destroy({ where: { id, email } })
+				response = await UsuariosModel.destroy({ where: { id } })
 				if (response > 0) return res.send({ message: "Conta deletada." })
 			}
 		}
@@ -86,4 +86,18 @@ exports.deleteAction = async (req, res) => {
 	} catch {
 		res.status(500).send({ message: "Tente novamente em alguns instantes." })
 	}
+}
+
+// verifica se o token é valido
+exports.verifyJWT = async (req, res) => {
+	let token = req.headers["authorization"]
+	if (!token) return res.status(401).send({ auth: false, message: "Token não informado." })
+
+	token = token.split(" ")[1]
+	try {
+		jwt.verify(token, process.env.JWT_TOKEN)
+	} catch {
+		return res.status(500).send({ auth: false, message: "Token inválido." })
+	}
+	res.status(200).send({ message: "logado" })
 }

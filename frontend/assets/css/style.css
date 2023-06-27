@@ -72,9 +72,11 @@ h1, h1, h3, h4, h5, h6, p, span { color: var(--black); }
 
 .text-orange { color: var(--orange); }
 
+.img-perfil { object-fit: cover; }
 /* FIM - GLOBAIS */
 
 header #logo span { font-weight: 700 !important; }
+header #nav-loged { display: none; }
 
 #logo-text { font-weight: 900; }
 
@@ -83,6 +85,8 @@ header #logo span { font-weight: 700 !important; }
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+#bloco1 .col-img { height: 80vh; }
 
 #bloco4 #cards-background { background-color: #e2e2e2; }
 
