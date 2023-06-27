@@ -20,13 +20,13 @@ exports.loginAction = async (req, res) => {
 		let response = await UsuariosModel.findOne({ where: { email } })
 		if (response) {
 			if (await passwordCompare(password, response.password)) {
-				let { nome, sobrenome, cpf_cnpj } = response
-				let token = createToken({ nome, sobrenome, cpf_cnpj, email })
+				let { nome, email, genero } = response
+				let token = createToken({ nome, email, genero })
 				response.password = undefined
 				return res.json({ response, token })
 			}
 		}
-		res.status(404).send({ message: "Dados incorretos." })
+		res.status(403).send({ message: "Dados incorretos." })
 	} catch {
 		res.status(500).send({ message: "Tente novamente em alguns instantes." })
 	}
@@ -40,7 +40,7 @@ exports.registerAction = async (req, res) => {
 	try {
 		let response = await UsuariosModel.create({ nome, email, data, genero, password })
 		response.password = undefined
-		let token = createToken({ nome, email, data, genero })
+		let token = createToken({ nome, email, genero })
 		if (response) res.json({ response, token })
 	} catch (err) {
 		if (err.name === "SequelizeUniqueConstraintError") return res.status(403).send("E-mail já está em uso.")

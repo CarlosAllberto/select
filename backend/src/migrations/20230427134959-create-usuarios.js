@@ -24,7 +24,7 @@ module.exports = {
                 allowNull: false,
             },
             genero: {
-                type: Sequelize.STRING,
+                type: Sequelize.STRING(1),
                 allowNull: false,
             },
             password: {
