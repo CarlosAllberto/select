@@ -26,24 +26,26 @@
                                     <div class="d-flex justify-content-center mb-5">
                                         <h1 class="title">Login</h1>
                                     </div>
-                                    <div class="my-4">
-                                        <label for="email">E-mail</label>
-                                        <input id="email" name="email" type="text" placeholder="Digite seu e-mail" class="form-control">
-                                    </div>
-                                    <div class="my-4">
-                                        <label for="password">Senha</label>
-                                        <div class="input-group">
-                                            <input id="password" name="password" type="password" placeholder="Digite sua senha" class="form-control">
-                                            <div class="input-group-append">
-                                                <button class="btn btn-outline-secondary">
-                                                    <i class="bi bi-eye"></i>
-                                                </button>
+                                    <form id="login-form" method="post">
+                                        <div class="my-4">
+                                            <label for="email">E-mail</label>
+                                            <input id="email" name="email" type="text" placeholder="Digite seu e-mail" class="form-control">
+                                        </div>
+                                        <div class="my-4">
+                                            <label for="password">Senha</label>
+                                            <div class="input-group">
+                                                <input id="password" name="password" type="password" placeholder="Digite sua senha" class="form-control">
+                                                <div class="input-group-append">
+                                                    <button class="btn btn-outline-secondary">
+                                                        <i class="bi bi-eye"></i>
+                                                    </button>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="d-flex justify-content-end my-3">
-                                        <button class="btn button-orange">Entrar</button>
-                                    </div>
+                                        <div class="d-flex justify-content-end my-3">
+                                            <button type="submit" class="btn button-orange">Entrar</button>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -53,5 +55,6 @@
         </section>
     </main>
 
+    <script src="../assets/js/login.js"></script>
 </body>
 </html>
