@@ -177,3 +177,21 @@ footer .social {
 #psicologo-bloco5 .card-content { height: 300px; }
 
 #perfil .perfil-button { margin-top: -30px; }
+
+@media (max-width: 768px) {
+    header .navbar-collapse { text-align: center; }
+    #bloco1 { padding-top: 5rem; }
+    #bloco2 { padding-top: 2rem;}
+    #bloco2 .row { height: 100% !important; }
+    footer { text-align: center; }
+    footer .row .d-flex { justify-content: center; }
+    #perfil .buttons-flex { flex-direction: column; }
+    #perfil .buttons-flex button { width: 100% !important; }
+    #bloco4 .card-content { height: 600px; }
+}
+
+@media (max-width: 425px) {
+    #saude-mental-bloco2 .card-content { height: 500px; }
+    #relacionamentos-bloco2 .card-content { height: 500px; }
+    #manuseamento-do-tempo-bloco2 .card-content { height: 500px; }
+}

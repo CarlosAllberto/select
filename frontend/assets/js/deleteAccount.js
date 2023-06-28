@@ -3,8 +3,9 @@ const buttonDelete = document.querySelector("#delete-account")
 const deleteAccount = async () => {
     let token = localStorage.getItem("token")
     let password = document.querySelector("#password-delete").value
+    let id = JSON.parse(localStorage.getItem("user")).id
 
-    await fetch("http://localhost:3333/user", {
+    await fetch(`http://localhost:3333/user/${id}`, {
         method: "DELETE",
         mode: "cors",
         cache: "no-cache",

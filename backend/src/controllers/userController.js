@@ -51,10 +51,10 @@ exports.registerAction = async (req, res) => {
 // edita os dados do usuario
 exports.editAction = async (req, res) => {
 	let { id } = req.params
-	let { nome, email, data, genero, password, avatar } = req.body
+	let { nome, email, data, genero, password } = req.body
 
 	try {
-		let response = await UsuariosModel.update({ nome, email, data, genero, password, avatar }, { where: { id } })
+		let response = await UsuariosModel.update({ nome, email, data, genero, password }, { where: { id } })
 		if (response[0] > 0) {
 			response = await UsuariosModel.findOne({ where: { id } })
 			let { nome, email, data, genero } = response
@@ -64,7 +64,7 @@ exports.editAction = async (req, res) => {
 		}
 		res.status(403).send({ message: "Nada para alterar." })
 	} catch {
-		res.status(505).send({ message: "Tente novamente em alguns instantes." })
+		res.status(500).send({ message: "Tente novamente em alguns instantes." })
 	}
 }
 
