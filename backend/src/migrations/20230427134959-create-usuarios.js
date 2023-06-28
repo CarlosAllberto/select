@@ -30,13 +30,8 @@ module.exports = {
             password: {
                 type: Sequelize.STRING,
                 allowNull: false
-            },
-            avatar: {
-                type: Sequelize.STRING(50),
-                allowNull: true,
-                defaultValue: "/avatars/default.png"
             }
-        })
+        }, { timestamps: false })
 	},
 
 	async down(queryInterface, Sequelize) {

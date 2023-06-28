@@ -1,9 +1,3 @@
-## Inportante:
-
-1 - Renomeie o arquivo "config-model.json" que está localizado em /backend/src/config/ para "config.json"
-
-2 - coloque o usuario e senha do seu MySQL no arquivo "config.json"
-
 ## Como correr:
 
 Na pasta /backend/src/ digite:
@@ -13,13 +7,26 @@ npm install -g yarn
 yarn
 yarn global add sequelize-cli
 yarn global add nodemon
+npx sequelize-cli init
+
+coloque o usuario e senha no arquivo localizado em "backend/src/config.json"
+
 npx sequelize-cli db:create
 npx sequelize-cli db:migrate
 yarn dev
 ```
 
-Mesma coisa mas usando apenas uma linha de comando na pasta /backend/src (caso não queira digitar os comandos acima):
+## Mesma coisa mas com menos trabalho. (caso não queira digitar os comandos acima):
+
+Na pasta "/backend/src" digite:
 
 ```
-npm install -g yarn && yarn && yarn global add sequelize-cli && yarn global add nodemon && npx sequelize-cli db:create && npx sequelize-cli db:migrate && yarn dev
+npm install -g yarn && yarn && yarn global add sequelize-cli && yarn global add nodemon && npx sequelize-cli init
+```
+
+Coloque o usuario e senha no arquivo localizado em "backend/src/config.json"
+Volte para a pasta "/backend/src" e digite:
+
+```
+npx sequelize-cli db:create && npx sequelize-cli db:migrate && yarn dev
 ```
