@@ -6,6 +6,10 @@
     --gren: #2ab318;
     --black: #202020;
 }
+@font-face {
+    font-family: "Michroma";
+    src: url("../font/Michroma-Regular.ttf");
+}
 h1, h1, h3, h4, h5, h6, p, span { color: var(--black); }
 ::-webkit-scrollbar { width: 10px; }
 ::-webkit-scrollbar-thumb { 
@@ -75,6 +79,7 @@ h1, h1, h3, h4, h5, h6, p, span { color: var(--black); }
 .img-perfil { object-fit: cover; }
 /* FIM - GLOBAIS */
 
+header #logo { font-family: "Michroma"; }
 header #logo span { font-weight: 700 !important; }
 header #nav-loged { display: none; }
 
